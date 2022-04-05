@@ -1,0 +1,170 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=15mm,
+ top=15mm,
+ bottom=15mm,
+ right=15mm,
+ }
+
+
+\begin{document}
+\setlength{\parindent}{0cm}
+\textbf{Project Title:} ADD THE PROJECT TITLE HERE
+
+\vspace{5mm}
+
+\noindent\textbf{1. Summary and contributions.} Briefly summarize the project.
+
+\vspace{2mm}\noindent\fbox{
+    \parbox{\columnwidth}{
+        \underline{Your text answer here.} Briefly summarize the main claims, key contributions and achievements of the project. You are expected to write roughly 2-4 sentences (1-2 paragraphs).
+        
+        \vspace{2mm}\underline{\textbf{Examples:}}
+        \begin{enumerate}
+            \item \textit{This project tests a novel game-theoretic view on PCA which yields an algorithm (EigenGame) that allows evaluation of singular vectors in a decentralized manner. The evaluation results confirm that algorithm is significant in its scalability. It is as demonstrated in the experiment on a large-scale dataset (ResNet-200 activations).}
+            \item \textit{To solve the 2-Wasserstein barycenter problem, the authors propose a novel formulation that leverages a condition (congruence) that the optimal transport maps (parameterized as networks) must obey at optimality. They introduce various regularizers to encourage that property. The idea is demonstrated on convincing experiments.}
+        \end{enumerate}
+        
+    }
+}\vspace{4mm}
+
+\textbf{2. Strengths.} Describe all the strengths of the project in enough depth.
+
+\vspace{2mm}\noindent\fbox{
+    \parbox{\columnwidth}{
+        \underline{Your text answer here.} List and explain the strengths of the project. Typical criteria include: completeness of the exposition; logic of the report; practical importance of the considered topic; motivation; \textbf{reasoning} for the choice of methods; \textbf{explanation} of used algorithms, models, datasets; thoroughness of \textbf{empirical evaluation} (ablation/robustness study) and \textbf{analysis} of the obtained results; proper theoretical grounding.
+        
+        \vspace{2mm}\underline{\textbf{Examples (fragments):}}
+        \begin{enumerate}
+            \item \textit{\dots The authors give a detailed theoretical analysis which provides important insights to the algorithm's performance. The derived insights and the performance of the algorithm are then confirmed by large-scale experiments on a great variety of datasets ($>$20)\dots }
+            \item \textit{\dots The experimental part is impressive. 3D reconstructions look realistic, and the authors demonstrated the effectiveness to train on StyleGAN by comparing their model to a neural network trained on PASCAL3D+\dots }
+        \end{enumerate}
+    }
+}\vspace{4mm}
+
+\textbf{3. Weaknesses}. Explain all the limitations of this project in enough depth.
+
+\vspace{2mm}\noindent\fbox{
+    \parbox{\columnwidth}{
+        \underline{Your text answer here.} Use the \textbf{same axes as above}, but now focusing on the limitations of this work. Your comments should be detailed, specific, and polite. Please avoid vague, subjective complaints. Always be constructive and help the authors understand your viewpoint, without being dismissive or using inappropriate language. Remember that you are not reviewing your level of interest in the submission, but the quality of the submission!
+        
+        \vspace{2mm}\underline{\textbf{Examples (fragments)
+        :}}
+        
+        \begin{enumerate}
+            \item \textit{\dots While drawing a parallel between Neural Processes and signal processes, I think that there is some weakness in the experiments of the project. The authors consider only the exponential quadratic kernel to generate examples which would mostly show examples of smooth functions as would sampling Fourier linear combinations\dots}
+            \item \textit{\dots The main benchmark's performance in the project is substantially lower than that of a publicly available implementation. This made me a bit skeptical of the correctness of the provided comparison\dots }
+            \item \textit{\dots The project leaves out some technical descriptions which make it not self-contained and hard to reproduce. Specifically, the authors should elaborate more on the individual loss terms in Equation 1.\dots }
+        \end{enumerate}
+        
+    }
+}\vspace{4mm}
+
+\textbf{4. Correctness.} Are the claims and method correct? Is the empirical methodology correct?
+
+\vspace{2mm}\noindent\fbox{
+    \parbox{\columnwidth}{
+        \underline{Your text answer here.} Explain if there is \textbf{anything} incorrect with the project. Incorrect claims, derivations or methodology are the primary reason for obtaining low grades. Be as detailed, objective, specific and polite as possible. Thoroughly motivate your criticism and arguments.
+        
+        \vspace{2mm}\underline{\textbf{Examples:}}
+        
+        \begin{enumerate}
+            \item \textit{The methodology of the project is correct.}
+            \item \textit{The methodology of the project has a lot of drawbacks. For example, the authors use the test part of the dataset to fit the pre-processing transform. This is prohibited since may lead to unfair results. Besides this, the test set simply seems to overlap with the train set! In the comparison method, they use not the parameters reported in the original paper. Thus, I completely doubt the correctness of most of the presented results and comparisons.}
+        \end{enumerate}
+    }
+}\vspace{4mm}
+
+\textbf{5. Clarity.} Is the project report well written?
+
+\vspace{2mm}\noindent\fbox{
+    \parbox{\columnwidth}{
+        \underline{Your text answer here.} Rate the clarity of exposition of the report. Give direct examples of what parts of the report need revision to improve clarity and explicitly explain why.
+        
+        \vspace{2mm}\textbf{Examples (fragments)}:
+        \begin{enumerate}
+            \item \textit{\dots The report lacks structuring. There are a lot of ideas, and some of them are not connected. For example, the authors describe Hawkes processes and then immediately jump to DTW. Adding some connections like "To evaluate the performance of the approach..." will significantly change the perception\dots }
+            \item \textit{\dots The "problem statement" section contains too many details. For
+example, there are many mathematical formulas that complicate understanding of the project. If they are necessary, then perhaps they should be written in a separate section\dots }
+            \item \textit{\dots In Section 3, the authors provide several tables with the results of computational experiments. However, there is little to know explanation about the evaluation procedure performed to obtain the presented scores (are they test scores?). The authors should address this question in detail\dots }
+        \end{enumerate}
+        
+    }
+}\vspace{4mm}
+
+\textbf{6. Related work.} Is it clearly discussed?
+
+\vspace{2mm}\noindent\fbox{
+    \parbox{\columnwidth}{
+        \underline{Your text answer here.} Explain whether the report is written with the due scholarship, relating the work with the existing work in the literature. Project should contain references and discussion of at least 4-5 relevant papers.  
+        
+        \vspace{2mm}\textbf{Examples}:
+        
+        \begin{enumerate}
+            \item \textit{The discussion of related work is sufficient and it is clear how the project is connected to the relevant papers.}
+            \item \textit{The authors use W-GAN as the main model to generate anomalious time-series of electricity consumption. However, for some reason do not even mention its popular improvements such as WGAN-GP, WGAN-LP.}
+        \end{enumerate}
+    }
+}\vspace{4mm}
+
+\textbf{7. Reproducibility.} Are there enough details to reproduce the major results of this work?
+
+\vspace{2mm}\noindent\fbox{
+    \parbox{\columnwidth}{
+\underline{Your text answer here.} Mark whether the work is reasonably reproducible. If it is not, lack of reproducibility should be listed among the weaknesses of the submission. Your assessment should be based on the contents of the report and the completeness of the project GitHub repo. 
+
+\underline{\textbf{Examples:}}
+\begin{enumerate}
+    \item \textit{I completely doubt that the project results are reproducible. The report contains neither information about the exact architecture of the used networks nor the details of the training procedure (learning rates, batch sizes etc.).}
+    \item \textit{The project results seem to be reasonably reproducible. However, the Github repo lacks instructions on how to run some of python scripts. Also, adding more detailed some information about the code structure could be useful.}
+\end{enumerate}
+    }
+}\vspace{4mm}
+
+\textbf{8. Overall score.} You should NOT assume that you were assigned a representative sample of projects. The “Overall Score” for each project should reflect your assessment of the project.
+
+\vspace{2mm}\noindent\fbox{
+    \parbox{\columnwidth}{
+     Choose your score by \textbf{deleting} all the other scores.
+     
+    % (0) YOu can just remove lines or comment them
+    (1) Truly groundbreaking work. Definitely maximal grade (A).
+    
+    (2) A very good submission; deserves high grade, tending to maximal (A).
+    
+    (3) A good submission (B).
+    
+    (4) Above the satisfactory level, but not good enough (C).
+    
+    (5) Marginally above the satisfactory level (D).
+    
+    (6) Exactly on the border of the satisfactory level (E).
+    
+    (7) I'm surprised this project was submitted. It is a clearly bad or is trivial/wrong (F).
+    }
+}\vspace{4mm}
+
+\textbf{9. Confidence score.} 
+
+\vspace{2mm}\noindent\fbox{
+    \parbox{\columnwidth}{
+    Choose your confidence score by \textbf{deleting} all the other scores.
+    
+    (5) You are \textbf{absolutely certain} about your assessment. You are very familiar with the topic.
+    
+    (4) You are \textbf{confident} in your assessment, but not absolutely certain. It is unlikely, but not impossible, that you did not understand some parts of the submission or that you are unfamiliar with some pieces of the topic.
+
+    (3) You are \textbf{fairly confident} in your assessment.  It is possible that you did not understand some parts of the submission or that you are unfamiliar with topic.
+
+    (2) You are willing to defend your assessment, but it is quite likely that you did not understand central parts of the submission or that you are unfamiliar with the topic.
+
+    (1) Your assessment is an \textbf{educated guess}. The submission is not in your area or the submission was difficult to understand.
+    }
+}\vspace{4mm}
+
+
+\end{document}
